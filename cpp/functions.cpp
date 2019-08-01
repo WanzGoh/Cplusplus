@@ -180,7 +180,7 @@ void stackMenu(){
     
     
 }
-//void push(int val){
+
 bool push(int val){
     
     if(ToS >= stackSize){
@@ -205,6 +205,7 @@ void pop(){
     ToS -=1;
     
 }
+
 void printStack(){
     if(ToS < 0){
         message("sorry stck is empty");
@@ -222,9 +223,6 @@ void printStack(){
 void message (std::string msg){
     std::cout << msg << std::endl;
 }
-
-
-// have to change compiler types C++11
 
 void someDataTypes(){
     //same output different methods
@@ -326,5 +324,85 @@ void someDataTypes(){
     
 }
 
+//overload
+int add(int a, int b ,int c){
+    return a+b+c;
+}
 
+int modify (int a, int &b ,int &c){
+    a+=1;
+    b+=2;
+    c+=3;
+    return a+b+c;
+}
+
+int result(){
+    
+    int x = 5;
+    int y = 4;
+    int z = 1;
+    
+    std::cout << add(x,y,z) << std::endl;
+    
+    int i , j ,k;
+    i=5; // this will be pass by value
+    j=4; // this will be pass by ref
+    k=2;
+    // pass by reference will check the address in the RAM
+    std:: cout << modify(i,j,k) << std::endl;
+    
+    // the value of i is Not modified with the pass by val function
+    std::cout << "value of i is : " << i << std::endl; // 5
+    
+    // the value of j is modified with the pass by reference function
+    std::cout << "value of j is : "<< j << std::endl; //6
+    
+    return 0;
+}
+
+void printDoubleNums(){
+    
+    float numbers[10] {1.1f,2.2f,3.3f,4.4f,5.5f,6.6f,7.7f,8.8f,9.9f,10.1f};
+    
+    long longNumbers[10] {100001L,200002L,300003L,400004L,500005L,600006L,700007L,800008L,900009L,1000001L};
+    
+    for (float number : numbers) {
+        std:: cout << number << std::endl;
+    }
+    
+    for (long number : longNumbers) {
+        std:: cout << number << std::endl;
+    }
+    
+}
+
+int multiplication(){
+
+    int multNumber[11][11] = {0};
+    int rows = sizeof(multNumber)/sizeof(multNumber[0]);
+    int cols = sizeof(multNumber[0])/sizeof(int);
+
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < cols; j++){
+            if(i == 0){
+                multNumber[i][j] = j;
+            }else if(j == 0){
+                multNumber[i][j] = i;
+            }else{
+                multNumber[i][j] = i * j;
+            }
+            std::cout  << "\t" << multNumber[i][j];
+        }
+        std::cout << '\n';
+
+    }return 0;
+    
+}
+
+
+    
+    
+    
+    
+    
 

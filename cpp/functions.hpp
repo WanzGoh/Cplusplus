@@ -24,3 +24,9 @@ bool PushWithPointer(int);
 int PopWithPointer();
 void PrintStackWithPointer();
 void stackMenuWithPointer();
+
+int add(int a, int b ,int c);
+int modify (int a, int &b ,int &c);
+int result();
+void printDoubleNums();
+int multiplication();

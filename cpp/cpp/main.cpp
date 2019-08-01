@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  main
+//  cpp
 //
 //  Created by Daniel Yuwan Goh on 2019-07-31.
 //  Copyright © 2019 Yuwan Go. All rights reserved.
@@ -9,12 +9,16 @@
 #include <iostream>
 #include <string>
 #include "functions.hpp"
+#include "extraFunctions.hpp"
+
+
+
 
 
 
 int main(){
     
-    stackMenuWithPointer();
+    multiplication();
     
     return 0;
 }
