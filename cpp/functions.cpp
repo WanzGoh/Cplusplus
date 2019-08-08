@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include "functions.hpp"
+#include <vector>
 // using std::cout;
 // using std::endl;
 
@@ -399,10 +400,55 @@ int multiplication(){
     
 }
 
+long long int fibo(unsigned int order){
+    
+    if (order == 0){
+        return 0;
+    }
+    if (order == 1){
+        return 1;
+    }
+    return fibo(order -1) + fibo(order -2);
+}
+    
+long long int factorial(unsigned int number){
+    
+    if (number <= 1) {
+        return 1;
+    }
+    return number * factorial(number -1);
+}
 
-    
-    
-    
-    
-    
+void fiboAndfacto(){
 
+    for (int i = 0 ; i <10; i ++) {
+    std::cout << fibo(i) << std::endl;
+    }
+
+
+    for (int i = 0 ; i <10; i ++) {
+        std::cout << factorial(i) << std::endl;
+    }
+}
+
+
+void studentlist(){
+    std::vector<std::string> students {"sina","siamak","hamed","mariana","jose","daniel",};
+
+    std::cout << "these are the students in our class" << std::endl;
+
+    for(auto student : students){
+    std::cout << student << " " ;
+        }
+    std::cout << std::endl;
+    std::cout << "who is the new student? ";
+    std::string NewStudent;
+    std::cin >> NewStudent;
+    students.push_back(NewStudent);
+    
+    std::cout << " ___new list___" << std::endl;
+    for (auto student : students) {
+        std::cout << student << " ";
+    }
+    std::cout << std::endl;
+}

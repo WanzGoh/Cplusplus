@@ -30,3 +30,10 @@ int modify (int a, int &b ,int &c);
 int result();
 void printDoubleNums();
 int multiplication();
+
+long long int fibo(unsigned int order);
+long long int factorial(unsigned int number);
+void studentlist();
+
+void printCat();
+void testTime();

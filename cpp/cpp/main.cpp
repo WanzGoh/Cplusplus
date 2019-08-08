@@ -11,6 +11,8 @@
 #include "functions.hpp"
 #include "extraFunctions.hpp"
 
+#include "basic/Cat.hpp"
+#include "basic/Time.hpp"
 
 
 
@@ -18,7 +20,8 @@
 
 int main(){
     
-    multiplication();
+    
+    
     
     return 0;
 }
